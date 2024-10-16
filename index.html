@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 class="title">RULETA DE REGALOS</h1>
+        <div class="roulette">
+            <canvas class="roulette-canva" id="canvas" width="500" height="500"></canvas>
+            <div class="marker"></div>
+            <button class="btn-spinStart" id="btn-spinStart" onclick="spin()">Girar</button>
+            
+        </div>
+
+        <div class="results">
+            <p id="winner"></p>
+        </div>
+        <!-- <div class="inputArea" onchange="createWheel()">
+            <textarea rows="20" cols="30" >cat dog</textarea>
+        </div> -->
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
