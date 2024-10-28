@@ -5,15 +5,31 @@
 }
 
 body{
-    background-color: #1a1921;
+    background-color: #22063c;
+    background: radial-gradient(#401e57, #22063c);
 }
 
-section{
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('texture.jpg'); /* Cambia 'ruta/de/tu/imagen.jpg' por la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.02; 
+    z-index: -1;
+}
+
+section.myContainer-section{
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 80vh;
+    /* height: 80vh; */
     gap: 2rem;
     text-align: center;
     color: #bd9258;
@@ -43,13 +59,17 @@ section{
     height: 10vw;
     min-width: 80px;
     min-height: 80px;
+    max-width: 6rem;
+    max-height: 6rem;
     top: 50%;
-    background-color: #b18654;
+    background-color: #200b2c;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 700;
     border-radius: 60px;
     border: none;
     transform: translateY(-50%);
+    border: 3px solid #edaf43;
 }
 
 .btn-spinStart:hover{
@@ -73,9 +93,20 @@ section{
 
 .results > p#winner {
     min-width: 50%;
-    height: 2rem;
+    min-height: 2rem;
     padding: 5px 2px;
     border: 1px solid #d59453;
     border-radius: 4px;
     background-color: #080710b0;
+    font-size: 25px;
 }
+
+.inputArea textarea{
+    min-width: 50%;
+    background: #170d23;
+    border: 1px solid #916e46;
+    text-align: center;
+    color: wheat;
+    font-size: 16px;
+}
+

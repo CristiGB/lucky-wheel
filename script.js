@@ -1,4 +1,5 @@
-const items = ["5 dolares", "lavadora", "Nada", "iphone", "papas", "tre", "dsa", "mdma"] //document.getElementsByTagName("textarea")[0].value.split("\n");
+// const items = ["5 dolares", "lavadora", "Nada", "iphone", "papas", "tre", "dsa", "mdma"]
+let items = document.getElementsByTagName("textarea")[0].value.split("\n");
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 const centerX = canvas.width/2
@@ -52,10 +53,12 @@ colors = generateRainbowColors(items.length);
 console.log(colors);
 
 function createWheel(){
+    items = document.getElementsByTagName("textarea")[0].value.split("\n");
     step = 360/items.length
     colors = []
 
     colors = generateRainbowColors(items.length);
+    draw()
 }
 draw()
 
@@ -125,6 +128,7 @@ function animate(){
     if(speed < 0.01){
         speed = 0
         pause = true
+        
     }
     currentDeg += speed
     draw()
